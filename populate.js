@@ -10,7 +10,9 @@ const start = (async() => {
     await Product.create(jsonProducts);
 
     console.log("Estabilished connection to the DB.");
+    process.exit(0);
   } catch(err) {
     console.log(err);
+    process.exit(1);
   }
 })();
